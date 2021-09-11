@@ -25,6 +25,7 @@ class MainActivity : AppCompatActivity() {
         recyclerViewMain = findViewById(R.id.recycler_view_main)
         fab = findViewById(R.id.fab)
 
+
         recyclerViewMain.let {
             it.adapter = adapter
             it.layoutManager = LinearLayoutManager(this)
@@ -36,6 +37,37 @@ class MainActivity : AppCompatActivity() {
                 recyclerViewMain.scrollToPosition(0)
             }
         }
+
+        val helper = androidx.recyclerview.widget.ItemTouchHelper(
+            ItemTouchHelper(
+                androidx.recyclerview.widget.ItemTouchHelper.UP or androidx.recyclerview.widget.ItemTouchHelper.DOWN,
+                androidx.recyclerview.widget.ItemTouchHelper.LEFT
+            )
+        )
+
+        helper.attachToRecyclerView(recyclerViewMain)
+    }
+
+    inner class ItemTouchHelper(dragDirs: Int, swipeDirs: Int) : androidx.recyclerview.widget.ItemTouchHelper.SimpleCallback(
+        dragDirs, swipeDirs
+    ) {
+        override fun onMove(
+            recyclerView: RecyclerView,
+            viewHolder: RecyclerView.ViewHolder,
+            target: RecyclerView.ViewHolder
+        ): Boolean {
+            val from = viewHolder.adapterPosition
+            val to = target.adapterPosition
+            Collections.swap(adapter.emails, from, to)
+            adapter.notifyItemMoved(from, to)
+            return true
+        }
+
+        override fun onSwiped(viewHolder: RecyclerView.ViewHolder, direction: Int) {
+            adapter.emails.removeAt(viewHolder.adapterPosition)
+            adapter.notifyItemRemoved(viewHolder.adapterPosition)
+        }
+
     }
 
     private fun addEmail() {
