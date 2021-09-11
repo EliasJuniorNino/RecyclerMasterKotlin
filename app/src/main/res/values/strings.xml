@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">RecyclerMasterKotlin</string>
+    <string name="add">Adicionar</string>
+    <string name="favorite">Favorito</string>
+</resources>

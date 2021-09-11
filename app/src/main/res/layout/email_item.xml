@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="@layout/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/card_view_bg" >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="16dp">
+        <TextView
+            android:id="@+id/txt_icon"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:textSize="24sp"
+            android:textColor="@android:color/white"
+            android:background="@drawable/circle"
+            tools:text="F"
+            android:gravity="center" />
+        <TextView
+            android:id="@+id/txt_user"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/txt_icon"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_toEndOf="@id/txt_icon"
+            android:layout_toRightOf="@id/txt_icon"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="18sp"
+            android:layout_toStartOf="@id/txt_date"
+            android:layout_toLeftOf="@id/txt_date"
+            tools:text="Youtube" />
+        <TextView
+            android:id="@+id/txt_subject"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_user"
+            android:layout_alignStart="@id/txt_user"
+            android:layout_alignLeft="@id/txt_user"
+            android:ellipsize="marquee"
+            android:singleLine="true"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="16sp"
+            tools:text="Lorem alkma lk lk lksalkslkda lk lk1 alskl klkas klk1" />
+        <TextView
+            android:id="@+id/txt_preview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_subject"
+            android:layout_alignStart="@id/txt_subject"
+            android:layout_alignLeft="@id/txt_subject"
+            android:ellipsize="marquee"
+            android:singleLine="true"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="16sp"
+            tools:text="Preview preview Preview previewPreview previewPreview previewPreview preview"
+            android:layout_toStartOf="@id/img_star"
+            android:layout_toLeftOf="@id/img_star" />
+        <TextView
+            android:id="@+id/txt_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_subject"
+            android:ellipsize="marquee"
+            android:singleLine="true"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="16sp"
+            tools:text="1 Setembro"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp" />
+        <ImageView
+            android:id="@+id/img_star"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_baseline_star_border_24"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="8dp"
+            android:contentDescription="@string/favorite"
+            android:layout_marginRight="8dp" />
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>
