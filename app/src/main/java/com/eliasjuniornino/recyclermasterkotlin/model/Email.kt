@@ -28,7 +28,49 @@ fun fakeEmails() = mutableListOf(
         user = "Facebook"
         subject = "Recomendação de amigos"
         preview = "Oi Elias estou te incomodando novamente"
+        date = "1 Jan"
+        stared = true
+    },
+    email {
+        user = "Facebook"
+        subject = "Recomendação de amigos"
+        preview = "Oi Elias estou te incomodando novamente"
+        date = "2 Jan"
+        stared = true
+    },
+    email {
+        user = "Facebook"
+        subject = "Recomendação de amigos"
+        preview = "Oi Elias estou te incomodando novamente"
         date = "3 Jan"
+        stared = true
+    },
+    email {
+        user = "Facebook"
+        subject = "Recomendação de amigos"
+        preview = "Oi Elias estou te incomodando novamente"
+        date = "4 Jan"
+        stared = true
+    },
+    email {
+        user = "Facebook"
+        subject = "Recomendação de amigos"
+        preview = "Oi Elias estou te incomodando novamente"
+        date = "5 Jan"
+        stared = true
+    },
+    email {
+        user = "Facebook"
+        subject = "Recomendação de amigos"
+        preview = "Oi Elias estou te incomodando novamente"
+        date = "6 Jan"
+        stared = true
+    },
+    email {
+        user = "Facebook"
+        subject = "Recomendação de amigos"
+        preview = "Oi Elias estou te incomodando novamente"
+        date = "7 Jan"
         stared = true
     },
 )
